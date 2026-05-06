@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StopWatch;
-import tools.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -32,7 +32,7 @@ public class DictionaryReference {
         // blocking instantiation
     }
 
-    private static void readDictionaryFile() {
+    private static void readDictionaryFile() throws Exception  {
 
         StopWatch stopWatch = new StopWatch();
         stopWatch.start();

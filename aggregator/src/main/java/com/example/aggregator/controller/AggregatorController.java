@@ -30,4 +30,12 @@ public class AggregatorController {
     public Entry getDefinitionFor(@PathVariable String word) {
         return aggregatorService.getDefinitionFor(word);
     }
+
+    // README Aggregator Step 3: copied getDefinitionFor, changed @GetMapping to
+    // /getAllPalindromes, removed path variable, changed return type to List<Entry>,
+    // changed service call to getAllPalindromes()
+    @GetMapping("/getAllPalindromes")
+    public List<Entry> getAllPalindromes() {
+        return aggregatorService.getAllPalindromes();
+    }
 }
